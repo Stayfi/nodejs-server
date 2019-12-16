@@ -3,6 +3,9 @@ import { assert } from 'chai';
 import request from 'supertest';
 import treeKill from 'tree-kill';
 
+const SERVER_RUN_SLOW = 10000;
+const SERVER_RUN_TIMEOUT = 20000;
+
 export default function serverStartTests() {
   describe('#Start: Server start test ', function() {
     const serverTestPort = 3003;
@@ -12,8 +15,8 @@ export default function serverStartTests() {
     let serverTestToBeKill: any;
 
     it(`Start Server should log on console 'Server is running on port ${serverTestPort}'`, function(done) {
-      this.timeout(7000);
-      this.slow(5000);
+      this.timeout(SERVER_RUN_TIMEOUT);
+      this.slow(SERVER_RUN_SLOW);
       let goDone = true;
       const serverTest = getServerRunning(serverTestPort, 'prod');
       serverTestToBeKill = serverTest;
@@ -43,8 +46,8 @@ export default function serverStartTests() {
     });
 
     it(`Start Server without logger should not log 'Logger enabled'`, function(done) {
-      this.timeout(7000);
-      this.slow(5000);
+      this.timeout(SERVER_RUN_TIMEOUT);
+      this.slow(SERVER_RUN_SLOW);
       const serverTestLoggerDisabled = getServerRunning(serverTestLoggerPort, 'prod');
 
       serverTestLoggerDisabled.stdout.on('data', function(data: {}) {
@@ -61,8 +64,8 @@ export default function serverStartTests() {
     });
 
     it(`Start:dev should not log 'Production mode'`, function(done) {
-      this.timeout(7000);
-      this.slow(5000);
+      this.timeout(SERVER_RUN_TIMEOUT);
+      this.slow(SERVER_RUN_SLOW);
       const serverTestProductionDisabled = getServerRunning(serverTestProductionDisabledPort, 'dev');
 
       serverTestProductionDisabled.stdout.on('data', function(data: {}) {
@@ -79,8 +82,8 @@ export default function serverStartTests() {
     });
 
     it(`Start:prod should log 'Production mode'`, function(done) {
-      this.timeout(7000);
-      this.slow(5000);
+      this.timeout(SERVER_RUN_TIMEOUT);
+      this.slow(SERVER_RUN_SLOW);
       let isDone = false;
       setTimeout(function() { if (!isDone) done(new Error('Production mode test: Timeout')); }, 6500);
       const serverTestProductionEnabled = getServerRunning(serverTestProductionEnabledPort, 'prod');
