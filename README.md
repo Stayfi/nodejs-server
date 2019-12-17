@@ -1,6 +1,6 @@
 # Node.js Express Server
 
-version: 'v1.0.0'
+version: 'v1.0.1'
 
 [![Build Status](https://travis-ci.org/Stayfi/nodejs-server.svg?branch=master)](https://travis-ci.org/Stayfi/nodejs-server)
 [![Coverage Status](https://coveralls.io/repos/github/Stayfi/nodejs-server/badge.svg?branch=develop)](https://coveralls.io/github/Stayfi/nodejs-server?branch=develop)
