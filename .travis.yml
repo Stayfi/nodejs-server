@@ -6,9 +6,11 @@ os:
 
 node_js:
   - '11'
+  - '12'
   - 'node' # latest stable Node.js release
 
 notifications:
   email:
     on_success: never
     on_failure: always
+script: npm run build:prod
