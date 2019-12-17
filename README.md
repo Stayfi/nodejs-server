@@ -61,7 +61,7 @@ https://mozilla.github.io/nunjucks/
 
 https://github.com/mozilla/node-convict
 
-Featureful configuration management library for Node.js
+"Featureful configuration management library for Node.js"
 
 First, we set a config schema: "/src/config/app-schema.conf.ts"
 
@@ -210,7 +210,7 @@ it('Server should be killed', function(done) {
 });
 ```
 
-#### Nyc && Istanbul
+#### Nyc & Istanbul
 
 Running test and generate report about code covered by tests.
 
@@ -227,6 +227,8 @@ https://github.com/kucherenko/jscpd
 "Copy/paste detector for programming source code."
 
 #### Concurrently
+
+https://github.com/kimmobrunfeldt/concurrently
 
 Concurrently run more than one commands with labels and custom color.
 
