@@ -15,26 +15,18 @@ describe('#Server config test', function () {
     serverConsoleLogStub = sinon.stub(console, 'log');
   });
 
-  /*
   it('Should default port setted to 3000', async function () {
-    const serverOptions: ServerOptionsInterface = {};
-    const serverTest: Server = getInitializedServer(serverOptions);
+    const serverAppOptions = getServerAppOptions();
+    const serverTest: Server = getInitializedServer(serverAppOptions);
     assert.equal(serverTest.options.port, 3000);
   });
 
-  it('Should options port setted to 3001 ', async function () {
-    const serverOptions: ServerOptionsInterface = { port: 3001 };
-    const serverTest: Server = getInitializedServer(serverOptions);
-    assert.equal(serverTest.options.port, 3001);
-  });
-
   it(`Should views_path be set to 'src/app' when not PROD_ENV`, async function () {
-    const serverOptions: ServerOptionsInterface = { };
-    const serverTest: Server = getInitializedServer(serverOptions);
+    const serverAppOptions = getServerAppOptions();
+    const serverTest: Server = getInitializedServer(serverAppOptions);
     const views_path = serverTest['getViewPath']();
     assert.equal(views_path, 'src/app');
   });
-*/
 
   it(`Should views_path be set to 'dist/app' when Production mode`, async function () {
     sandbox.stub(process, 'env').value({ NODE_ENV: appEnvironment.PROD });
@@ -64,7 +56,7 @@ describe('#Server config test', function () {
     assert.isFalse(loggerEnabled);
   });
   
-  it(`Should console.log('√ Staging mode') when production environment`, async function () {
+  it(`Should console.log('√ Staging mode') when staging environment`, async function () {
     sandbox.stub(process, 'env').value({ NODE_ENV: appEnvironment.STAGING });
     const serverAppOptions = getServerAppOptions();
     const serverTest: Server = getInitializedServer(serverAppOptions);
