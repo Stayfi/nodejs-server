@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "target": "es6",
-    "strict": true,
     "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
     "esModuleInterop": true
   },
+  "compileOnSave": true,
   "include": [
-    "src/**/*"
+    "src"
   ],
   "exclude": [
     "src/**/*.spec.ts"

@@ -1,11 +1,10 @@
 import Server from './app/server/server.class';
-import { appEnvironment } from './app/shared/app-environment.enum';
 import { ServerOptionsInterface } from './app/server/server.interface';
 import config from './config/config';
 const appConfig = config();
 
 const serverAppOptions: ServerOptionsInterface = {
-  env: appConfig.get('env') as appEnvironment,
+  env: appConfig.get('env'),
   logger: {
     enabled: appConfig.get('logger')
   },
