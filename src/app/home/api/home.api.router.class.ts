@@ -1,5 +1,5 @@
 import express from 'express';
-import RouterInterface from '../../shared/router.interface';
+import RouterInterface from '../../_shared/router.interface';
 import HomeApiController from './home.api.controller';
 const router = express.Router();
 

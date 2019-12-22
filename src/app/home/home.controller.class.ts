@@ -1,4 +1,4 @@
-import ActionViewInterface from '../shared/actionView.interface';
+import ActionViewInterface from '../_shared/actionView.interface';
 
 export default class HomeController {
   public IndexActionView(): ActionViewInterface {

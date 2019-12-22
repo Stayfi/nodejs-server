@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import http from 'http';
 import morgan from 'morgan';
 import nunjucks from 'nunjucks';
-import { appEnvironment } from '../shared/app-environment.enum';
+import { appEnvironment } from '../_shared/app-environment.enum';
 import { ServerInterface, ServerOptionsInterface } from './server.interface';
 import ServerRouter from './server.router.class';
 

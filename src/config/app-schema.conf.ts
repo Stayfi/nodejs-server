@@ -1,4 +1,4 @@
-import { appEnvironment } from '../app/shared/app-environment.enum';
+import { appEnvironment } from '../app/_shared/app-environment.enum';
 
 export const appSchemaConfig = {
   env: {

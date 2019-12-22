@@ -1,5 +1,5 @@
 import express from 'express';
-import { appEnvironment } from '../shared/app-environment.enum';
+import { appEnvironment } from '../_shared/app-environment.enum';
 
 export interface ServerInterface {
   readonly app: express.Application;
