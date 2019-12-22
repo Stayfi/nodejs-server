@@ -3,8 +3,8 @@ import { assert } from 'chai';
 import * as sinon from 'sinon';
 import request from 'supertest';
 import Server from './server.class';
-import { appEnvironment } from '../shared/app-environment.enum';
-import { ServerOptionsInterface, ServerInterface } from './server.interface';
+import { appEnvironment } from '../_shared/app-environment.enum';
+import { ServerOptionsInterface } from './server.interface';
 import config from '../../config/config';
 
 const sandbox = sinon.createSandbox();

@@ -1,7 +1,7 @@
 import 'mocha';
 import { assert } from 'chai';
 import * as sinon from 'sinon';
-import { appEnvironment } from './app/shared/app-environment.enum';
+import { appEnvironment } from './app/_shared/app-environment.enum';
 import config from './config/config';
 const defaultConf = require('../config/default.conf.json');
 const developmentConf = require('../config/development.conf.json');
@@ -18,6 +18,10 @@ export default function environmentsServerconfigTests() {
     const serverPortTest = testConf.port;
     const serverPortStaging = stagingConf.port;
     const serverPortProduction = productionConf.port;
+
+    describe('#Env:Default server env is "development"', function () {
+      assert.equal(defaultConf.env, appEnvironment.DEV);
+    });
 
     describe('#Env:Development server config test ', function () {
       serverConfigTest(appEnvironment.DEV, loggerIsEnabled, serverPortDevelopment);

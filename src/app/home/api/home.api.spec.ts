@@ -1,9 +1,8 @@
 import 'mocha';
 import { assert } from 'chai';
-import * as sinon from 'sinon';
 import request from 'supertest';
 import Server from '../../server/server.class';
-import { appEnvironment } from '../../shared/app-environment.enum';
+import { appEnvironment } from '../../_shared/app-environment.enum';
 import { ServerOptionsInterface } from '../../server/server.interface';
 
 describe('#Home Api test', function() {
