@@ -1,6 +1,6 @@
 import express from 'express';
 import RouterInterface from '../_shared/router.interface';
-import ActionViewInterface from '../_shared/actionView.interface';
+import ActionViewInterface from '../_shared/action-view.interface';
 import HomeController from './home.controller.class';
 const router = express.Router();
 
